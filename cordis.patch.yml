@@ -1,0 +1,7 @@
+# Bundle patch layer for dsh-plugin-wallpaper: mounts the dual-face plugin row.
+# The host half (lib/index.js) registers the ui-wallpaper settings namespace and
+# injects the wallpaper CSS; the client half (lib/client.js) is discovered from
+# the package's dsh.client declaration and served to the browser.
+- insert:
+    - id: wallpaper
+      name: dsh-plugin-wallpaper
