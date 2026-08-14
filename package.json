@@ -1,0 +1,41 @@
+{
+  "name": "dsh-plugin-wallpaper",
+  "version": "0.1.0",
+  "description": "Adjustable wallpaper (background image) for the DeepSeek Harness Web GUI",
+  "type": "module",
+  "main": "lib/index.js",
+  "exports": {
+    ".": "./lib/index.js",
+    "./client": "./lib/client.js",
+    "./package.json": "./package.json"
+  },
+  "files": [
+    "lib",
+    "README.md",
+    "LICENSE"
+  ],
+  "dsh": {
+    "client": {
+      "inject": [
+        "@deepseek-ai/dsh-client-connection",
+        "@deepseek-ai/dsh-client-runtime",
+        "@deepseek-ai/dsh-client-locale",
+        "@deepseek-ai/dsh-client-ui-settings",
+        "@deepseek-ai/dsh-api-remotes"
+      ],
+      "platform": "web"
+    }
+  },
+  "peerDependencies": {
+    "@deepseek-ai/dsh-settings": "^0.1.0-rc.6",
+    "@deepseek-ai/schemastery": "^3.18.1"
+  },
+  "keywords": [
+    "dsh",
+    "deepseek-harness",
+    "wallpaper",
+    "background",
+    "plugin"
+  ],
+  "license": "MIT"
+}
